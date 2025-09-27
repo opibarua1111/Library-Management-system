@@ -18,6 +18,12 @@ namespace LibraryManagementSystem.Controllers
             _finesService = finesService;
         }
 
+        /// <summary>
+        /// GET: api/fines/member/{id}
+        /// Retrieves all fines for a specific member by their unique identifier.
+        /// </summary>
+        /// <param name="id">The unique identifier of the member.</param>
+        /// <returns>CustomResponse containing a list of fines for the member or an error message.</returns>
         [HttpGet("member/{id}")]
         public async Task<ActionResult<IEnumerable<Fine>>> GetFinesForMember(Guid id)
         {
@@ -35,6 +41,12 @@ namespace LibraryManagementSystem.Controllers
             return Ok(response);
         }
 
+        /// <summary>
+        /// PUT: api/fines/{id}/pay
+        /// Pays a specific fine by its unique identifier.
+        /// </summary>
+        /// <param name="id">The unique identifier of the fine to pay.</param>
+        /// <returns>CustomResponse indicating success or failure of the payment operation.</returns>
         [HttpPut("{id}/pay")]
         public async Task<IActionResult> PayFine(Guid id)
         {

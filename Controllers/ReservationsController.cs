@@ -17,6 +17,13 @@ namespace LibraryManagementSystem.Controllers
         {
             _reservationsService = reservationsService;
         }
+
+        /// <summary>
+        /// POST: api/reservations
+        /// Creates a new reservation for a book by a member.
+        /// </summary>
+        /// <param name="reservation">The reservation object containing book and member details.</param>
+        /// <returns>CustomResponse with the created reservation or an error message.</returns>
         [HttpPost]
         public async Task<ActionResult<Reservation>> CreateReservation(Reservation reservation)
         {
@@ -34,6 +41,12 @@ namespace LibraryManagementSystem.Controllers
             return Ok(response);
         }
 
+        /// <summary>
+        /// PUT: api/reservations/{id}/fulfill
+        /// Marks a reservation as fulfilled by its unique identifier.
+        /// </summary>
+        /// <param name="id">The unique identifier of the reservation to fulfill.</param>
+        /// <returns>CustomResponse indicating success or failure of the fulfill operation.</returns>
         [HttpPut("{id}/fulfill")]
         public async Task<IActionResult> FulfillReservation(Guid id)
         {
@@ -51,6 +64,12 @@ namespace LibraryManagementSystem.Controllers
             return Ok(response);
         }
 
+        /// <summary>
+        /// PUT: api/reservations/{id}/cancel
+        /// Cancels a reservation by its unique identifier.
+        /// </summary>
+        /// <param name="id">The unique identifier of the reservation to cancel.</param>
+        /// <returns>CustomResponse indicating success or failure of the cancel operation.</returns>
         [HttpPut("{id}/cancel")]
         public async Task<IActionResult> CancelReservation(Guid id)
         {

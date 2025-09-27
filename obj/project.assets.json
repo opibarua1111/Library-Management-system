@@ -4449,11 +4449,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MedicalAppointmentSystem\\LibraryManagementSystem\\LibraryManagementSystem\\LibraryManagementSystem.csproj",
+      "projectUniqueName": "D:\\LibraryManagementSystem\\LibraryManagementSystem\\LibraryManagementSystem.csproj",
       "projectName": "LibraryManagementSystem",
-      "projectPath": "D:\\MedicalAppointmentSystem\\LibraryManagementSystem\\LibraryManagementSystem\\LibraryManagementSystem.csproj",
+      "projectPath": "D:\\LibraryManagementSystem\\LibraryManagementSystem\\LibraryManagementSystem.csproj",
       "packagesPath": "C:\\Users\\HP 850 G8\\.nuget\\packages\\",
-      "outputPath": "D:\\MedicalAppointmentSystem\\LibraryManagementSystem\\LibraryManagementSystem\\obj\\",
+      "outputPath": "D:\\LibraryManagementSystem\\LibraryManagementSystem\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

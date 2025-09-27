@@ -17,6 +17,7 @@ namespace LibraryManagementSystem.Controllers
         {
             _categoriesService = categoriesService;
         }
+        // GET: api/categories
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Category>>> GetCategories()
         {
@@ -34,6 +35,7 @@ namespace LibraryManagementSystem.Controllers
             return Ok(response);
         }
 
+        // POST: api/categories
         [HttpPost]
         public async Task<ActionResult<Category>> CreateCategory(Category category)
         {
@@ -50,7 +52,7 @@ namespace LibraryManagementSystem.Controllers
             }
             return Ok(response);
         }
-
+        // PUT: api/categories
         [HttpPut]
         public async Task<IActionResult> UpdateCategory(Category category)
         {
@@ -67,7 +69,7 @@ namespace LibraryManagementSystem.Controllers
             }
             return Ok(response);
         }
-
+        // DELETE: api/categories/{id}
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCategory(Guid id)
         {
